@@ -227,6 +227,17 @@ h3 {
     cursor: pointer;
 }
 
+.exhibit-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.exhibit-card-link:hover .exhibit-card {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
 .exhibit-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -505,6 +516,137 @@ h3 {
     padding-top: 2rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
+}
+
+/* History Page Styles */
+.history-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.history-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.history-hero .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.history-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 25, 41, 0.9) 0%, rgba(10, 25, 41, 0.7) 100%);
+}
+
+.history-hero .hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.history-hero .hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.history-hero .hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #e3b04b;
+}
+
+.history-hero .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.history-content {
+    background: #f8f9fa;
+    padding: 60px 0;
+}
+
+.history-article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.history-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.history-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.history-section h2 {
+    color: #0a1929;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #e3b04b;
+    padding-bottom: 0.5rem;
+}
+
+.history-section p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.history-section p:last-child {
+    margin-bottom: 0;
+}
+
+.back-to-exhibits {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.back-to-exhibits .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #0a1929 0%, #1a2332 100%);
+    color: #e3b04b;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #e3b04b;
+}
+
+.back-to-exhibits .cta-button:hover {
+    background: linear-gradient(135deg, #e3b04b 0%, #f4d03f 100%);
+    color: #0a1929;
+    transform: translateY(-3px);
 }
 
 /* Scroll Animations */
