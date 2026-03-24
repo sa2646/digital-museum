@@ -632,14 +632,15 @@ h3 {
 
 .back-to-exhibits .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #0a1929 0%, #1a2332 100%);
-    color: #e3b04b;
-    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #e3b04b 0%, #f4d03f 100%);
+    color: #0a1929;
+    padding: 12px 24px;
     border-radius: 50px;
-    text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    text-decoration: none;
+    font-size: 1rem;
     transition: all 0.3s ease;
+    position: relative;
     border: 2px solid #e3b04b;
 }
 
@@ -647,6 +648,7 @@ h3 {
     background: linear-gradient(135deg, #e3b04b 0%, #f4d03f 100%);
     color: #0a1929;
     transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(227, 176, 75, 0.4);
 }
 
 /* Samba Schools Page Styles */
