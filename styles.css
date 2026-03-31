@@ -456,16 +456,13 @@ h3 {
     background: linear-gradient(135deg, #e3b04b 0%, #f4d03f 100%);
     color: #0a1929;
     border: none;
-    padding: 1rem 2.5rem;
+    padding: 15px 30px;
     border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(227, 176, 75, 0.3);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+    border: 2px solid #e3b04b;
 }
 
 .rhythm-button:hover {

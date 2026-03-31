@@ -127,28 +127,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Samba audio player
-    const playButton = document.getElementById('play-samba');
-    const sambaAudio = document.getElementById('samba-audio');
+    // Carnival music player
+    const playButton = document.getElementById('play-carnival');
+    const stopButton = document.getElementById('stop-carnival');
+    const carnivalAudio = document.getElementById('carnival-audio');
     let isPlaying = false;
 
     playButton.addEventListener('click', function() {
         if (isPlaying) {
-            sambaAudio.pause();
-            playButton.innerHTML = '<span class="play-icon">▶</span> Play Samba Rhythm';
+            carnivalAudio.pause();
+            playButton.innerHTML = '<span class="play-icon">▶</span><span class="play-text">Play Carnival Music</span>';
             playButton.classList.remove('playing');
             isPlaying = false;
         } else {
-            sambaAudio.play();
-            playButton.innerHTML = '<span class="play-icon">⏸</span> Pause Samba Rhythm';
+            carnivalAudio.play();
+            playButton.innerHTML = '<span class="play-icon">⏸</span><span class="play-text">Pause Carnival Music</span>';
             playButton.classList.add('playing');
             isPlaying = true;
         }
     });
 
+    stopButton.addEventListener('click', function() {
+        carnivalAudio.pause();
+        carnivalAudio.currentTime = 0;
+        playButton.innerHTML = '<span class="play-icon">▶</span><span class="play-text">Play Carnival Music</span>';
+        playButton.classList.remove('playing');
+        isPlaying = false;
+    });
+
     // Handle audio end
-    sambaAudio.addEventListener('ended', function() {
-        playButton.innerHTML = '<span class="play-icon">▶</span> Play Samba Rhythm';
+    carnivalAudio.addEventListener('ended', function() {
+        playButton.innerHTML = '<span class="play-icon">▶</span><span class="play-text">Play Carnival Music</span>';
         playButton.classList.remove('playing');
         isPlaying = false;
     });
