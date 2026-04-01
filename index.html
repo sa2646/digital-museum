@@ -152,30 +152,70 @@
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">Carnival Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-aos="zoom-in">
-                    <img src="images/gallery1.jpg" alt="Carnival Parade 1">
-                    <div class="gallery-overlay">
-                        <span>View Image</span>
+            
+            <!-- Carousel Container -->
+            <div class="carousel-container" data-aos="fade-up">
+                <!-- Navigation Buttons -->
+                <button class="carousel-nav prev-btn" id="carousel-prev">
+                    <span class="nav-arrow">‹</span>
+                </button>
+                <button class="carousel-nav next-btn" id="carousel-next">
+                    <span class="nav-arrow">›</span>
+                </button>
+                
+                <!-- Carousel Track -->
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <div class="carousel-image">
+                            <img src="images/gallery1.jpg" alt="Carnival Parade 1">
+                        </div>
+                        <div class="carousel-blurb">
+                            <h3>Vibrant Parade Floats</h3>
+                            <p>Experience the spectacular floats that bring Brazilian culture to life through intricate designs and vibrant colors.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-image">
+                            <img src="images/gallery2.jpg" alt="Carnival Parade 2">
+                        </div>
+                        <div class="carousel-blurb">
+                            <h3>Samba School Performances</h3>
+                            <p>Watch as samba schools compete with elaborate costumes, choreographed dances, and infectious rhythms.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-image">
+                            <img src="images/gallery3.jpg" alt="Carnival Parade 3">
+                        </div>
+                        <div class="carousel-blurb">
+                            <h3>Cultural Celebration</h3>
+                            <p>Join millions in celebrating Brazil's rich cultural heritage through music, dance, and artistic expression.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-image">
+                            <img src="images/gallery4.jpg" alt="Carnival Parade 4">
+                        </div>
+                        <div class="carousel-blurb">
+                            <h3>The Sambadrome Spectacle</h3>
+                            <p>Discover the iconic venue where thousands gather to witness the world's greatest carnival celebration.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="images/gallery2.jpg" alt="Carnival Parade 2">
-                    <div class="gallery-overlay">
-                        <span>View Image</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="images/gallery3.jpg" alt="Carnival Parade 3">
-                    <div class="gallery-overlay">
-                        <span>View Image</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="images/gallery4.jpg" alt="Carnival Parade 4">
-                    <div class="gallery-overlay">
-                        <span>View Image</span>
-                    </div>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
                 </div>
             </div>
         </div>

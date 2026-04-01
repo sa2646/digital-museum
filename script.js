@@ -173,6 +173,80 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Carousel functionality
+    const carouselTrack = document.getElementById('carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Show current slide
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % totalSlides;
+        showSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(prevIndex);
+    }
+
+    // Event listeners for navigation buttons
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showSlide(index));
+    });
+
+    // Auto-play carousel (optional)
+    let autoPlayInterval;
+    
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
+    
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // Start auto-play
+    startAutoPlay();
+
+    // Stop auto-play on hover
+    if (carouselTrack) {
+        carouselTrack.addEventListener('mouseenter', stopAutoPlay);
+        carouselTrack.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+
     // Exhibit card hover effects
     const exhibitCards = document.querySelectorAll('.exhibit-card');
     exhibitCards.forEach(card => {
