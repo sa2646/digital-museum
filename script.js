@@ -31,8 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            
+            // Check if it's a cross-page link (contains index.html)
+            if (targetId.includes('index.html')) {
+                // For cross-page links, let the browser navigate normally
+                // The anchor will be handled by the destination page
+                return;
+            }
+            
+            // Handle same-page anchor links
+            e.preventDefault();
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
@@ -44,6 +53,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Handle anchor links on page load
+    function handlePageLoadAnchor() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                setTimeout(() => {
+                    const offsetTop = targetSection.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }, 100); // Small delay to ensure page is loaded
+            }
+        }
+    }
+
+    // Check for anchor on page load
+    handlePageLoadAnchor();
 
     // Scroll reveal animations
     const observerOptions = {
