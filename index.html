@@ -148,74 +148,112 @@
         </div>
     </section>
 
-    <!-- Interactive Gallery -->
-    <section class="gallery" id="gallery">
+    <!-- Exhibition Gallery -->
+    <section class="gallery-room" id="gallery">
         <div class="container">
-            <h2 class="section-title">Carnival Gallery</h2>
+            <h1 class="room-title">Carnival Collection</h1>
+            <p class="room-subtitle">Curated artifacts from Brazil's most spectacular cultural celebration</p>
             
-            <!-- Carousel Container -->
-            <div class="carousel-container" data-aos="fade-up">
-                <!-- Navigation Buttons -->
-                <button class="carousel-nav prev-btn" id="carousel-prev">
-                    <span class="nav-arrow">‹</span>
-                </button>
-                <button class="carousel-nav next-btn" id="carousel-next">
-                    <span class="nav-arrow">›</span>
-                </button>
-                
-                <!-- Carousel Track -->
-                <div class="carousel-track" id="carousel-track">
-                    <!-- Slide 1 -->
-                    <div class="carousel-slide active">
-                        <div class="carousel-image">
-                            <img src="images/bird carnival.jpg" alt="Vibrant Parade Floats">
-                        </div>
-                        <div class="carousel-blurb">
-                            <h3>Vibrant Parade Floats</h3>
-                            <p>Experience the spectacular floats that bring Brazilian culture to life through intricate designs and vibrant colors.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <div class="carousel-image">
-                            <img src="images/performance.webp" alt="Samba School Performances">
-                        </div>
-                        <div class="carousel-blurb">
-                            <h3>Samba School Performances</h3>
-                            <p>Watch as samba schools compete with elaborate costumes, choreographed dances, and infectious rhythms.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="carousel-slide">
-                        <div class="carousel-image">
-                            <img src="images/crowd.jpg" alt="Cultural Celebration">
-                        </div>
-                        <div class="carousel-blurb">
-                            <h3>Cultural Celebration</h3>
-                            <p>Join millions in celebrating Brazil's rich cultural heritage through music, dance, and artistic expression.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <div class="carousel-image">
-                            <img src="images/sambadrome gallery.jpg" alt="The Sambadrome Spectacle">
-                        </div>
-                        <div class="carousel-blurb">
-                            <h3>The Sambadrome Spectacle</h3>
-                            <p>Discover the iconic venue where thousands gather to witness the world's greatest carnival celebration.</p>
+            <!-- Curatorial Introduction -->
+            <div class="curatorial-label">
+                <p class="curatorial-label-text">
+                    These selected artifacts represent the essence of Carnival in Rio - from the intricate craftsmanship of parade floats to the passionate performances of samba schools. Each piece tells a story of cultural identity, artistic expression, and community celebration.
+                </p>
+                <p class="curatorial-label-author">— Museum Curator</p>
+            </div>
+            
+            <!-- Artifact Collection -->
+            <div class="artifact-container">
+                <!-- Artifact 1: Parade Float -->
+                <div class="artifact" data-aos="fade-up">
+                    <img src="images/bird carnival.jpg" alt="Vibrant Parade Float" class="artifact-image">
+                    <div class="artifact-metadata">
+                        <h3 class="artifact-title">Parade Float Design</h3>
+                        <p class="artifact-catalog">Catalog #CM.2024.001</p>
+                        <p class="artifact-description">
+                            Spectacular parade floats featuring intricate bird motifs represent the freedom and joy of Carnival. These moving sculptures transform the Sambadrome into a living gallery of Brazilian artistry.
+                        </p>
+                        <div class="artifact-details">
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Origin:</span> Rio de Janeiro, 2024
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Materials:</span> Steel framework, fabric, feathers, paint
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Cultural Significance:</span> Symbol of artistic freedom and community creativity
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                    <button class="indicator active" data-slide="0"></button>
-                    <button class="indicator" data-slide="1"></button>
-                    <button class="indicator" data-slide="2"></button>
-                    <button class="indicator" data-slide="3"></button>
+                <!-- Artifact 2: Performance -->
+                <div class="artifact" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/performance.webp" alt="Samba School Performance" class="artifact-image">
+                    <div class="artifact-metadata">
+                        <h3 class="artifact-title">Samba Performance</h3>
+                        <p class="artifact-catalog">Catalog #CM.2024.002</p>
+                        <p class="artifact-description">
+                            The heart of Carnival lies in these powerful performances where dancers become living embodiments of rhythm and movement. Each samba school spends months preparing their competitive presentation.
+                        </p>
+                        <div class="artifact-details">
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Origin:</span> Sambadrome, Rio de Janeiro
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Tradition:</span> Annual competition since 1932
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Cultural Significance:</span> Preservation of Afro-Brazilian heritage
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artifact 3: Cultural Celebration -->
+                <div class="artifact" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/crowd.jpg" alt="Cultural Celebration" class="artifact-image">
+                    <div class="artifact-metadata">
+                        <h3 class="artifact-title">Community Celebration</h3>
+                        <p class="artifact-catalog">Catalog #CM.2024.003</p>
+                        <p class="artifact-description">
+                            Millions gather to witness and participate in Carnival, creating a collective experience of joy and cultural affirmation. The crowd itself becomes part of the artistic expression.
+                        </p>
+                        <div class="artifact-details">
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Participants:</span> 2+ million annually
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Duration:</span> 5 days of celebration
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Cultural Significance:</span> Democratic celebration of Brazilian identity
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artifact 4: Sambadrome -->
+                <div class="artifact" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/sambadrome gallery.jpg" alt="The Sambadrome" class="artifact-image">
+                    <div class="artifact-metadata">
+                        <h3 class="artifact-title">The Sambadrome</h3>
+                        <p class="artifact-catalog">Catalog #CM.2024.004</p>
+                        <p class="artifact-description">
+                            This iconic stadium serves as the sacred space where Carnival's competitive performances unfold. Designed by Oscar Niemeyer, it represents modern Brazilian architecture meeting traditional celebration.
+                        </p>
+                        <div class="artifact-details">
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Architect:</span> Oscar Niemeyer
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Capacity:</span> 90,000 spectators
+                            </div>
+                            <div class="artifact-detail-item">
+                                <span class="artifact-detail-label">Cultural Significance:</span> Modern temple of Carnival tradition
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
